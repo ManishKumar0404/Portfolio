@@ -1,0 +1,28 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Simple static portfolio ready for deployment to Vercel.",
+  "main": "index.html",
+  "scripts": {
+    "build:js": "babel app.jsx --out-file app.js",
+    "build:css": "tailwindcss -i ./styles.input.css -o ./styles.css --minify",
+    "build": "npm run build:js && npm run build:css",
+    "dev": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
