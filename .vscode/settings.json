@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.root": "/",
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.port": 5502,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "liveServer.settings.NoBrowser": false,
+  "livePreview.defaultPreviewPath": "/index.html"
+}
