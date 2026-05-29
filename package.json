@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Simple static portfolio ready for deployment to Vercel.",
   "main": "index.html",
+  "homepage": "https://manishkumar0404.github.io/Portfolio/",
   "scripts": {
     "build:js": "babel app.jsx --out-file app.js",
     "build:css": "tailwindcss -i ./styles.input.css -o ./styles.css --minify",

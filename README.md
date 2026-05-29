@@ -1,6 +1,10 @@
 # My Portfolio
 
-Portfolio site with precompiled React JS and Tailwind CSS assets.
+[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://manishkumar0404.github.io/Portfolio/)
+
+Portfolio site with precompiled React and Tailwind CSS assets. View the live site here:
+
+- Live demo: https://manishkumar0404.github.io/Portfolio/
 
 ## Local development
 
@@ -18,14 +22,26 @@ npm run build
 
 Then open `index.html` with Live Server.
 
-## Deployment
+## Deploy
 
-Deploy with Vercel CLI:
+GitHub Pages (manual):
+
+1. Ensure `npm run predeploy` produces a `dist/` folder.
+2. Run:
+
+```bash
+npm run deploy
+```
+
+Vercel (recommended):
+
+- Build Command: `npm run predeploy`
+- Output Directory: `dist`
+
+Or deploy with the Vercel CLI:
 
 ```bash
 npm i -g vercel
 vercel login
 vercel --prod
 ```
-
-Or push to GitHub and import the repository on https://vercel.com.

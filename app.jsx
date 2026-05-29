@@ -16,19 +16,24 @@ function Portfolio() {
       title: 'Find Online Courses',
       desc: 'Discover curated online courses designed to help you learn new skills, grow professionally, and stay ahead in the digital world. Whether you’re a beginner or looking to advance, these courses provide practical knowledge with real-world applications.',
       tech: 'React, Node.js, OpenAI API',
-      liveUrl: 'https://lms-client-dun.vercel.app/'
+      liveUrl: 'https://lms-client-dun.vercel.app/',
+      image: 'assets/find-online-courses.svg?v=1'
     },
     {
       title: 'E-Commerce Store',
       desc: 'Responsive shopping website with cart, payment, and authentication.',
       tech: 'React, MongoDB, Express',
-      liveUrl: ''
+      liveUrl: 'https://velora-client-psi.vercel.app/',
+      githubUrl: 'https://velora-client-psi.vercel.app/',
+      image: 'assets/e-commerce-store.svg?v=1'
     },
     {
       title: 'Portfolio Website',
       desc: 'Animated futuristic personal portfolio website.',
       tech: 'React, Tailwind CSS, Framer Motion',
-      liveUrl: ''
+      liveUrl: '',
+      githubUrl: 'https://portfolio-tawny-xi-24.vercel.app/',
+      image: 'assets/portfolio-website.svg?v=1'
     }
   ];
 
@@ -192,7 +197,18 @@ function Portfolio() {
               key={index}
               className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition duration-300"
             >
-              <div className="h-52 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
+              <div className="h-52 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.style.display = 'none';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+              </div>
 
               <div className="p-6">
                 <h4 className="text-2xl font-bold mb-4">{project.title}</h4>
@@ -214,12 +230,12 @@ function Portfolio() {
                   </a>
 
                   <a
-                    href="https://github.com/ManishKumar0404"
+                    href={project.githubUrl || 'https://github.com/ManishKumar0404'}
                     target="_blank"
                     rel="noreferrer"
                     className="px-5 py-2 border border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black transition"
                   >
-                    GitHub
+                    Website
                   </a>
                 </div>
               </div>
